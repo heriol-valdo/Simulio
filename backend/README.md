@@ -7,7 +7,7 @@
 - `src/` :
   - `authentification/` : Fonctions de création et vérification des tokens JWT.
   - `config/` :
-    - `database.py` : Gestion de la connexion à la base de données MySQL via SQLAlchemy.
+    - `database.py` : Gestion de la connexion à la base de données MySQL via SQLAlchemy ( vous devez modifier ici les accès à votre base de données MySQL )
     - `test.py` : Fonctions pour effectuer des calculs liés aux simulations.
   - `controller/` : Logique métier, validation des données reçues, et interface entre les modèles et la base.
   - `models/` : Définitions des classes ORM qui correspondent aux tables de la base de données.
@@ -22,7 +22,6 @@
 - `sqlalchemy` : ORM pour interagir avec la base de données MySQL.
 - `pymysql` : Connecteur MySQL pour Python.
 - `python-jose[cryptography]` : Pour créer et vérifier des tokens JWT.
-- `python-dotenv` : Chargement des variables d’environnement depuis un fichier `.env`.
 - `passlib[bcrypt]` : Gestion sécurisée des mots de passe.
 - `pandas`, `numpy`, `numpy_financial` : Librairies pour calculs et traitements statistiques/financiers.
 
@@ -32,7 +31,7 @@
 
 ### Prérequis
 
-- Python 3.8+ installé sur ta machine.
+- Python 3.8+ installé,  lien de téléchargement https://www.python.org/downloads/. 
 - MySQL installé et configuré (ou un autre serveur compatible MySQL).
 
 
@@ -73,6 +72,8 @@
         ```bash
         uvicorn main:app --reload
         ```
+### 5.  Exécuter le script SQL contenu dans le fichier dump.sql dans votre base de données MySQL 
+
 
 - L’API sera accessible par défaut sur [http://localhost:8000]
 

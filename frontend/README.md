@@ -30,8 +30,8 @@
 
 ### Prérequis
 
-- [Node.js](https://nodejs.org/en/) Télecharger Node.JS
-- [npm](https://www.npmjs.com/) 
+- Node.js installé,  lien de téléchargement https://nodejs.org/en/
+- npm https://www.npmjs.com/
 
 
 
