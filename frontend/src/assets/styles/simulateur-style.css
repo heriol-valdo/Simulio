@@ -1,0 +1,540 @@
+.simulateur-container {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x:auto;
+}
+
+
+
+h3{
+  font-size: 1.4rem;
+  color: #7b3f8c;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.table-lignes td {
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+  text-align: left;
+}
+
+.table-lignes tr td:nth-child(2) {
+  text-align: end;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.form-client {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+
+
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+.range-row input[type="range"] {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.range-row .input-number {
+  width: 80px;
+  text-align: center;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #280f30;
+}
+
+.range-row .input-number:focus {
+  outline: none;
+  border-color: #7b3f8c;
+  box-shadow: 0 0 0 2px rgba(123, 63, 140, 0.2);
+ 
+}
+
+.range-row .unit {
+  flex-shrink: 0;
+  color: #280f30;
+  width: 20px;
+}
+
+
+
+.result-section,
+.form-section {
+  flex: 1 1 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.result-section {
+  width: 60%;
+   margin-right: 25%;
+   height: 100%;
+   margin-bottom: 2%;
+ 
+}
+
+.form-section {
+  margin-left: 15%;
+  margin-right: 5%;
+}
+
+@media  (max-width: 1597px) {
+  .result-section {
+    width: 100%;
+    margin-right: 0;
+  }
+  .form-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  
+  
+}
+
+
+
+.form-section .form-group-general, .result-section .form-group-general  {
+  padding: 1.5rem;
+}
+
+.result-section .form-group-general button {
+ display: block;
+  margin: 0 auto;
+}
+
+.form-title {
+  text-align: center;
+  background-color: #cecece;
+  height: 30px;
+  border-top: 3px solid #cecece;
+  border-radius: 8px 8px 0 0;
+  color: black;
+}
+
+
+.form-group {
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.form-number {
+  display: flex;
+  align-items: center;
+  background-color: #cecece;
+  border-radius: 4px ;  
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.label-form {
+  flex: 0 0 180px;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.label-form-revalo {
+  flex: 0 0 220px;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.label-form-assurance {
+  flex: 0 0 210px;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+  padding-left: 8px;
+}
+.label-form-notaire {
+  flex: 0 0 200px;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.label-form-agence {
+  flex: 0 0 200px;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+  padding-left: 12px;
+}
+
+
+.input-number-form {
+  flex: 1;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  color: #280f30;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.form-number-unit {
+  flex-shrink: 0;
+  color: #280f30;
+  padding: 0 0.3rem;
+}
+
+
+.date-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.date-picker input:focus{
+  border: 1px solid #7b3f8c;
+  box-shadow: 0 0 0 2px rgba(123, 63, 140, 0.2);
+  outline: none;
+}
+
+
+
+.date-picker input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: #280f30;
+}
+
+
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #280f30;
+  font-size: 1rem;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1rem;
+  overflow: hidden; 
+}
+
+select:focus {
+  outline: none;
+  border-color: #7b3f8c;
+  box-shadow: 0 0 0 2px rgba(123, 63, 140, 0.2);
+}
+
+
+select option {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+    color: #fff;
+  background-color: #7b3f8c;
+  max-width: 60px;
+}
+
+.unit {
+  color: #280f30;
+}
+
+
+button {
+  margin-top: 1rem;
+  background-color: #310f3ac5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #aaa;
+}
+
+
+.monthly {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7b3f8c;
+  margin: auto;
+  text-align: center;
+  height: 50px;
+  border: #fff 2px solid;
+  border-radius: 50px;
+  background-color: #dadada;
+  width: 60%;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0.5rem 0.3rem;
+}
+
+td {
+  font-size: 0.95rem;
+}
+
+
+.input-number {
+  width: 100px;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #280f30;
+  text-align: center;
+}
+
+
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  background: #967e9cd2;
+  height: 0.5rem;
+  border-radius: 6px;
+}
+input[type='range']::-moz-range-track {
+  background: #967e9cd2;
+  height: 0.5rem;
+  border-radius: 6px;
+}
+input[type='range']::-ms-track {
+  background: #967e9cd2;
+  height: 0.5rem;
+  border-radius: 6px;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  background: #310f3ac5;
+  border-radius: 50%;
+  margin-top: -0.25rem;
+}
+
+input[type='range']:hover::-webkit-slider-thumb{
+  height: 1.1rem;
+  width: 1.1rem;
+}
+input[type='range']::-moz-range-thumb {
+  height: 1rem;
+  width: 1rem;
+  background: #967e9cd2;
+  border-radius: 50%;
+  border: none;
+}
+input[type='range']::-ms-thumb {
+  height: 1rem;
+  width: 1rem;
+  background: #967e9cd2;
+  border-radius: 50%;
+  border: none;
+}
+
+.result-section-wrapper {
+  position: relative;
+}
+
+
+.loader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* léger voile blanc */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* Bounce Loader */
+.bounce-loader {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+  pointer-events: none;
+}
+
+.bounce-loader div {
+  width: 18px;
+  height: 18px;
+  background-color: #007BFF;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.bounce-loader div:nth-child(1) { animation-delay: -0.32s; }
+.bounce-loader div:nth-child(2) { animation-delay: -0.16s; }
+.bounce-loader div:nth-child(3) { animation-delay: 0s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Fade transition */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.input-number-form:focus {
+  border-color: #7b3f8c;
+  box-shadow: 0 0 0 2px rgba(123, 63, 140, 0.2);
+  outline: none; 
+}
+
+
+
+@media (max-width: 768px) {
+  .simulateur-container {
+    flex-direction: column;
+    align-items: center;
+   
+  }
+
+ 
+
+  .result-section {
+    width: 100%;
+    margin-right: 0;
+  }
+  .form-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-title {
+    font-size: 0.9rem;
+  }
+
+  .label-form {
+      flex: 0 0 110px;  
+   }
+
+.label-form-revalo {
+  flex: 0 0 160px;
+   font-size: 15px;
+}
+
+.input-number-form {
+  width: 15%; 
+  outline: none;
+}
+
+.input-number-form:focus {
+  border-color: #7b3f8c;
+  box-shadow: 0 0 0 2px rgba(123, 63, 140, 0.2);
+  outline: none; 
+}
+
+
+.label-form-assurance {
+  flex: 0 0 150px;
+  font-size: 0.95rem;
+}
+.label-form-notaire {
+  flex: 0 0 140px;
+  font-size: 0.95rem;
+}
+
+.label-form-agence {
+  flex: 0 0 140px;
+  font-size: 0.95rem;
+}
+
+}
+ 
+
+  @media screen and (max-width: 414px) {
+  .result-section {
+    width: 100%;
+    margin-right: 0;
+  }
+  .form-section {
+    width: 110%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-title {
+    font-size: 0.8rem;
+    
+  }
+  .label-form {
+  flex: 0 0 100px;
+ 
+}
+
+.label-form-revalo {
+  flex: 0 0 120px;
+
+}
+
+.input-number-form {
+  width: 15%; 
+}
+
+
+.label-form-assurance {
+  flex: 0 0 125px;
+  font-size: 0.95rem;
+}
+.label-form-notaire {
+  flex: 0 0 120px;
+  font-size: 0.95rem;
+}
+
+.label-form-agence {
+  flex: 0 0 120px;
+  font-size: 0.95rem;
+}
+}

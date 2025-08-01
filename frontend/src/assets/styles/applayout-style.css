@@ -1,0 +1,67 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px; 
+  padding-bottom: 50px; 
+  transition: margin-left 0.3s ease;
+  overflow: auto;
+}
+
+.main-container.sidebar-collapsed {
+  margin-left: 70px;
+}
+
+.content {
+  position: fixed;
+  top: 90px;
+  left: 300px;
+  right: 20px;
+  height: 850px;
+  padding-bottom: 70px;
+  transition: left 0.3s ease;
+   z-index: auto;
+   overflow: auto;
+    scrollbar-width: none;   
+  -ms-overflow-style: none; 
+  
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+
+.sidebar-collapsed + .main-container .content {
+  left: 90px; 
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    margin-left: 0;
+    overflow: auto;
+  }
+  .content {
+   position: fixed;
+   left: 0;
+   z-index: auto;
+   margin-right: 3px;
+   overflow: auto;
+  }
+}
+
+  @media screen and (max-width: 414px) {
+  .content {
+   position: fixed;
+   left: 0;
+   z-index: auto;
+   left: 100px;
+   overflow: auto;
+  }
+  }

@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  top: 20px;
+  left: 300px;
+  right: 20px;
+  height: 80px;
+  transition: left 0.3s ease;
+  z-index: 1001;
+  
+}
+
+.sidebar-collapsed + .main-container .header {
+  left: 90px; 
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  right: 20px;
+ 
+}
+
+.page-title h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+   position: fixed;
+   left: 0;
+   z-index: auto;
+  }
+}
