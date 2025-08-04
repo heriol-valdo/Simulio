@@ -5,6 +5,6 @@
 3. Modifier les accès à la base de données dans le fichier docker-compose.yml.
 4. Lancer : `docker-compose up --build`
 5. Accès :
-   - Frontend : http://localhost:3000
+   - Frontend : http://localhost:5173
    - Backend (API docs) : http://localhost:8000/docs
    - MySQL : port 3306

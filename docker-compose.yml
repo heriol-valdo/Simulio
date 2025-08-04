@@ -6,35 +6,43 @@ services:
     container_name: mysql
     restart: always
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: ""
       MYSQL_DATABASE: dump
-      MYSQL_USER: root
-      MYSQL_PASSWORD: ""
+      MYSQL_USER: heriol
+      MYSQL_PASSWORD: monSuperMotDePasse123!
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - dbdata:/var/lib/mysql
       - ./backend/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "heriol", "--password=monSuperMotDePasse123!"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
   backend:
     build: ./backend
     container_name: fastapi-backend
+    restart: always
     ports:
-      - "8000:8000"
+      - "8001:8001"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     environment:
       DB_HOST: mysql
       DB_PORT: 3306
       DB_NAME: dump
-      DB_USER: root
-      DB_PASSWORD: ""
+      DB_USER: heriol
+      DB_PASSWORD: monSuperMotDePasse123!
 
   frontend:
     build: ./frontend
     container_name: vue-frontend
     ports:
-      - "3000:3000"
+      - "5173:5173"
     depends_on:
       - backend
 
