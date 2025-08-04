@@ -75,7 +75,7 @@
 ### 5.  Exécuter le script SQL contenu dans le fichier dump.sql dans votre base de données MySQL 
 
 
-- L’API sera accessible par défaut sur [http://localhost:8000]
+- L’API sera accessible par défaut sur [http://localhost:8001]
 
 
 

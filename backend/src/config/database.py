@@ -7,15 +7,10 @@ import sys
 # Variables d'environnement avec valeurs par défaut
 import os
 
-DB_HOST = os.getenv("DB_HOST", "mysql")
-DB_PORT = os.getenv("DB_PORT", "3307")
-DB_NAME = os.getenv("DB_NAME", "dump")
-DB_USER = os.getenv("DB_USER", "heriol")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "monSuperMotDePasse123!")
+ # heriol  : Remplacez ceci par le nom de votre utilisateur, différent de l'utilisateur root par défaut. 
+ # monSuperMotDePasse123! : Remplacez ceci par le mot de passe de votre utilisateur, différent du mot de passe par défaut de l'utilisateur root.
 
-print(f"[DEBUG] Connexion à MySQL sur {DB_HOST}:{DB_PORT} avec utilisateur {DB_USER}")
-
-DATABASE_URL = "mysql+pymysql://heriol:monSuperMotDePasse123!@mysql:3307/dump"
+DATABASE_URL = "mysql+pymysql://heriol:monSuperMotDePasse123!@mysql:3306/dump"
 
 
 def create_database_connection(max_retries=10, retry_delay=5):

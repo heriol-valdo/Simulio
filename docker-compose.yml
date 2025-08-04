@@ -6,10 +6,10 @@ services:
     container_name: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ROOT_PASSWORD: heriol  # Remplacez ceci par le mot de passe de l'utilisateur root.
       MYSQL_DATABASE: dump
-      MYSQL_USER: heriol
-      MYSQL_PASSWORD: monSuperMotDePasse123!
+      MYSQL_USER: heriol # Remplacez ceci par le nom de votre utilisateur, différent de l'utilisateur root par défaut.
+      MYSQL_PASSWORD: monSuperMotDePasse123! # Remplacez ceci par le mot de passe de votre utilisateur, différent du mot de passe par défaut de l'utilisateur root.
     ports:
       - "3307:3306"
     volumes:
@@ -35,8 +35,8 @@ services:
       DB_HOST: mysql
       DB_PORT: 3306
       DB_NAME: dump
-      DB_USER: heriol
-      DB_PASSWORD: monSuperMotDePasse123!
+      DB_USER: heriol # Remplacez ceci par le nom de votre utilisateur, différent de l'utilisateur root par défaut.
+      DB_PASSWORD: monSuperMotDePasse123! # Remplacez ceci par le mot de passe de votre utilisateur, différent du mot de passe par défaut de l'utilisateur root.
 
   frontend:
     build: ./frontend
