@@ -7,5 +7,5 @@ passlib[bcrypt]
 pandas
 numpy
 numpy_financial
-
+mysql-connector-python
 
